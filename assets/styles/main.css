@@ -1,0 +1,256 @@
+@charset "UTF-8";
+
+/* Typical Devices Breakpoints 
+
+Mobile devices – 320px — 480px.
+iPads, Tablets – 481px — 768px.
+Small screens, laptops – 769px — 1024px.
+Desktops, large screens – 1025px — 1200px.
+Extra large screens, TV – 1201px, and more.
+
+/* **** */
+
+/* MOBILE FIRST */
+
+:root{
+	/* --hsl-hue: 195; (azul) */
+	/* --color-01: hsl(var(--hsl-hue), 91%, 25%);  */
+
+	--color-white: hsl(0, 0%, 100%);	
+	--color-gray-100: #DEE2E6;
+	--color-gray-800: #343A40; 
+	--color-gray-900: #212529;
+	--color-01: #F9F4FB; /* background */
+	--color-02: #B52184; /* h1 - h2 */ 
+	--color-03: #343193; /* main-color - gradient light color */
+	--color-04: #197278; /* hightlight */
+	--color-05: #302C63; /* gradient dark color - text - input border */
+	--color-06: #921b6a;
+	--color-07: #8bb8ff; /* btn-active */
+	
+	/*OBS: Gradient aplicado a 45° no footer, botões e section bg */
+	font-size: 62.5%;
+
+	font-family: 'Mulish', sans-serif;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+html, body, input{
+	font-family: 'Mulish', sans-serif;
+}
+
+body{
+	background-color: var(--color-01);
+	color: var(--color-05);
+	font-weight: 500;
+	font-size: 1.6rem;
+}
+
+h1, h2{
+	color: var(--color-02);
+	font-weight: 900;
+}
+
+header{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+header #main-image{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 1.6rem;
+}
+
+header #main-title{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#arrow-down{
+	width: inherit;
+}
+
+h1{
+	font-size: 3.2rem;
+	margin-bottom: 4px;
+}
+
+h2{
+	font-size: 2.8rem;
+	margin-bottom: 0.8rem;
+}
+
+h3{
+	font-size: 2rem;
+	font-weight: 500;
+	color: var(--color-05);
+	margin-bottom: 3.6rem;
+}
+
+#arrow-down{
+	margin-bottom: 9.2rem;
+}
+
+section#main-content{
+	background-image: linear-gradient(135deg, var(--color-03), var(--color-05));
+	padding: 52px 40px;
+}
+
+.cards-container{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: stretch;
+	row-gap:	4.8rem;
+	column-gap: 6rem;
+}
+
+.card{
+	background-color: var(--color-white);
+	padding: 24px;
+	border-radius: 2rem;
+	max-width: 366px;
+}
+
+.card img{
+	margin-bottom: 1.6rem;
+}
+
+#contact{
+	padding: 80px 40px 64px;
+}
+
+#contact h1{
+	margin-bottom: 4.4rem;
+}
+
+.inputs-container{
+	display: flex;
+	flex-direction: column;
+	/* gap: 24px; */
+
+	max-width: 500px;
+}
+
+.input-style{
+	border-radius: 16px;
+	border: 2px solid var(--color-05);
+	padding: 12px 16px;
+	font-size: 1.6rem;
+	font-weight: 500;
+}
+
+.input-style::placeholder{
+	color: var(--color-gray-800);
+	font-family: 'Mulish', sans-serif;
+}
+
+.input-style:focus{
+	box-shadow: 0 0 10px var(--color-04);
+}
+
+#email-input,
+#message-input,
+.btn{
+	margin-top: 24px;
+}
+
+#username-input,
+#email-input{
+	padding-left: 48px; /* padding left do icon + width do icon(~~20px) */
+}
+
+#username-input,
+#email-input{
+	position: relative;
+}
+
+#user-icon,
+#email-icon{
+	position: relative;
+}
+
+#user-icon::before,
+#email-icon::before{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 16px; /* Ajustar o espaço para o ícone */
+    background-repeat: no-repeat;
+    display: block; /* Certificar-se de que os pseudoelementos são exibidos como blocos */
+    z-index: 1; /* Garantir que os ícones estão acima do fundo do input */
+}
+
+#user-icon::before{
+	top: 14px
+}
+
+#email-icon::before{
+	top: 38px
+}
+
+#user-icon::before {
+	background-image: url('../images/user.png');
+}
+
+#email-icon::before {
+	background-image: url('../images/at.png');
+}
+
+#message-input{
+	height: 132px;
+}
+
+.btn{
+	background-image: linear-gradient(135deg, var(--color-03), var(--color-05));
+	color: var(--color-white);
+	font-size: 16px;
+	border-radius: 16px;
+	padding: 16px;
+	border: none;
+	cursor: pointer;
+}
+
+.btn:hover{
+	background-image: linear-gradient(135deg, var(--color-02), var(--color-06));
+}
+
+.btn:active{
+	background-image: linear-gradient(135deg, var(--color-02), var(--color-06));
+	color: var(--color-07);
+}
+
+#contact-image{
+	display: none;
+}
+
+footer{
+	/* position: fixed;
+	bottom: 0; */
+	height: 76px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: linear-gradient(135deg, var(--color-03), var(--color-05));
+	color: var(--color-white);
+}
+
+footer p{
+	font-size: 2rem;
+}
+
+

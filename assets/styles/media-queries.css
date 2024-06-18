@@ -1,0 +1,119 @@
+@charset "UTF-8";
+
+/* Typical Devices Breakpoints 
+
+Mobile devices – 320px — 480px.
+iPads, Tablets – 481px — 768px.
+Small screens, laptops – 769px — 1024px.
+Desktops, large screens – 1025px — 1200px.
+Extra large screens, TV – 1201px, and more.
+
+/* **** */
+
+/* MOBILE FIRST */
+
+:root{
+	/* --hsl-hue: 195; (azul) */
+	/* --color-01: hsl(var(--hsl-hue), 91%, 25%);  */
+
+	--color-white: hsl(0, 0%, 100%);	
+	--color-gray-100: #DEE2E6;
+	--color-gray-800: #343A40; 
+	--color-gray-900: #212529;
+	--color-01: #F9F4FB; /* background */
+	--color-02: #B52184; /* h1 - h2 */ 
+	--color-03: #343193; /* main-color - gradient light color */
+	--color-04: #197278; /* hightlight */
+	--color-05: #302C63; /* gradient dark color - text - input border */
+	
+	/*OBS: Gradient aplicado a 45° no footer, botões e section bg */
+	font-size: 62.5%;
+
+	font-family: 'Mulish', sans-serif;
+}
+
+/* Já criamos uma versão para celular (que engloba ‘pequenas telas’ e ‘celular’ do Typical Device Breakpoints) */
+
+/* Extra large screens, TV – 1201px, and more. */
+
+@media screen and (min-width: 1201px){
+	.container-style{
+		max-width: 1200px;
+		padding-left: 40px;
+		padding-right: 40px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	header{
+		display: flex;
+		flex-direction: row-reverse;
+		align-items: end;
+		margin-bottom: 10.4rem;
+	}
+	
+	header #main-title {
+		display: flex;
+    flex-direction: column;
+    align-items: start;
+		
+	}
+	
+	#arrow-down {
+    margin-bottom: 5.2rem;
+	}
+
+	h1{
+		font-size: 5.8rem;
+    margin-bottom: 4px;
+	}
+
+	h2{
+		font-size: 3.6rem;
+		margin-bottom: 1.2rem;
+	}
+
+	p{
+		font-size: 2rem;
+	}
+	
+	h3{
+		font-size: 3.2rem;
+		margin-bottom: 16.4rem;
+	}
+
+	section#main-content {
+    padding: 52px 40px;
+	}
+
+	#contact{
+		display: flex;
+		justify-content: space-between;
+		padding-bottom: 0;
+	}
+
+	#contact-image{
+		display: block;
+		margin-left: 8px;
+	}
+
+	.input-style{
+		min-width: 500px;
+		max-width: 50%;
+	}
+}
+
+@media screen and (min-width: 1440px){
+	.container-style{
+		max-width: 1360px;
+		padding-left: 40px;
+		padding-right: 40px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.cards-container{
+		justify-content: space-between;
+	}
+}
+
